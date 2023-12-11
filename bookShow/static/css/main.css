@@ -1,0 +1,322 @@
+*{padding: 0;
+  margin: 0;
+}
+
+
+.parent{
+  padding-top:0px;
+  margin: 0;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  flex-direction: row;
+  align-items: center ;
+  position: relative;
+}
+.child{
+  position:absolute;
+       top: 20%;
+       left: 35%;
+       
+}
+.hd1{font-size: 100px;
+     color: antiquewhite;
+    }
+
+.main{
+
+height: 50vh;
+padding-top: 30px;
+box-shadow: 0 10px 20px rgb(40, 40, 40);
+}
+
+/* .div1{
+  position: absolute;
+  top:0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  border-bottom: 0 10px 20px rgb(40,40,40);
+} */
+.img1{box-shadow: 0 10px 20px rgb(40, 40, 40);
+      border-radius: 50px;
+    translate: .3s;}
+.overly{position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        background: black;
+        cursor: pointer;
+      }
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+.img:hover .overly{
+  opacity: 0.8;
+  box-shadow: 0 10px 20px rgb(14, 15, 14);
+  scale: 1.5;
+}
+
+
+/* mollywood */
+
+.nav1{padding-left: 5px;
+      padding-right: 5px;
+}
+.nav2{
+  padding-right: 5px;
+}
+.nav3{
+  padding-right: 5px;
+}
+.d-flex{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 40%;
+}
+.div_01{
+  background-color: rgb(235, 233, 230);
+  height: 100px;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  flex-direction: row;
+  align-items: center ;
+  box-shadow: 0 10px 20px rgb(14, 15, 14);
+  border: 1px solid black;
+}
+
+.bi{color: gold;}
+
+/* Mdetails */
+
+@media (min-width: 300px) and (max-width:768px)
+{
+  .img_m1{height:250px;
+    width: 150px;
+         }
+  .div_m2{background-color: #36395A;
+       width: 350px;
+       height: 80px;
+       border-radius: 10px;
+       color: #D6D6E7;
+       position: absolute;
+       top:60%;
+       left: 120%;
+       display: flex;
+       align-items: center;
+       font-size: 50px;
+         }
+     
+  
+}
+
+
+
+.Mdetails_parent{position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  flex-direction: row;
+  align-items: center ;
+  
+  
+}
+.child{
+  position: absolute;
+  top:30%;
+  left: 20%;
+
+  
+
+}
+.img_m1{height:350px;
+        width: 250px;
+        
+         
+       }
+
+.div_m1{position: absolute;
+       
+        top:0;
+        left:120%;
+        color: aliceblue;
+        
+
+
+}
+
+
+
+.div_m2{background-color: #36395A;
+  width: 550px;
+  height: 80px;
+  border-radius: 10px;
+  color: #D6D6E7;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+          }
+
+       .button-30 {
+        align-items: center;
+        appearance: none;
+        background-color: #FCFCFD;
+        border-radius: 4px;
+        border-width: 0;
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+        box-sizing: border-box;
+        color: #36395A;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: "JetBrains Mono",monospace;
+        height: 48px;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow .15s,transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow,transform;
+        font-size: 18px;
+      }
+      
+      .button-30:focus {
+        box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+      }
+      
+      .button-30:hover {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        transform: translateY(-2px);
+      }
+      
+      .button-30:active {
+        box-shadow: #D6D6E7 0 3px 7px inset;
+        transform: translateY(2px);
+      }
+.bt_m1{position: absolute;
+       right: 10px;
+       display: flex;
+}
+
+
+
+
+
+
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+
+.abt_0{ margin-top: 20px;
+position: absolute;
+transform: translate(50%,50%);
+display: flex;
+justify-content: center;
+
+}
