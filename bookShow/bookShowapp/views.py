@@ -1,21 +1,42 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Movies
 
-# Create your views here.
-# def home(req):
-#     return render(req,'index.html')
+
 def molly(req):
     obj=Movies.objects.all
     return render(req,'molly.html',{'movies':obj})
-def holly(req):
-    return render(req,'holly.html')
-def bolly(req):
-    return render(req,'bolly.html')
-def mdetails(req,movie_id):
-    
+def mdetails(req,movie_id): 
     data=Movies.objects.get(id=movie_id)
     return render(req,'Mdetails.html',{'data':data})
-def hdetails(req):
-    return render(req,'hdetails.html')
-def bdetails(req):
-    return render(req,'bdetails.html')
+
+
+def registermovie(req,):
+
+    if req.method=='POST':
+        name=req.POST.get('name')
+        rate=req.POST.get('rate')
+        screen=req.POST.get('screen')
+        language=req.POST.get('language')
+        date_dur=req.POST.get('date_dur')
+        photo=req.FILES['photo']
+        bgphoto=req.FILES['bgphoto']
+
+        movie=Movies(name=name,rate=rate,screen=screen,language=language,date_dur=date_dur,photo=photo,bgphoto=bgphoto)
+        movie.save()
+
+        return redirect('/')
+
+
+
+
+
+    return render(req,'regmovie.html')
+
+def delete(req,detail_id):
+    if req.method=='POST':
+      data=Movies.objects.get(id=detail_id) 
+      data.delete()
+      return redirect('/')
+   
+
+    return render(req,'delete.html')

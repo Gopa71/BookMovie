@@ -51,20 +51,24 @@
           </form>
         <ul class="nav nav-pills">
           
-          {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
 
-            <li class="nav-item nav1">
-              <a class="nav-link active " aria-current="page" href="credential/logout">Logout</a>
-          {% else %} 
-            <li class="nav-item nav2">
-              <a class="nav-link active" aria-current="page" href="credential/register">Register</a>
-            </li>
-          
-            <li class="nav-item nav2">
-              <a class="nav-link active " aria-current="page" href="credential/login">Login</a>
-            </li>
-          {% endif %}
-            </ul>
+        <li class="nav-item nav2">
+          <a class="nav-link active" aria-current="page" href="{% url 'bookmyshow:regmovie' %}">RegisterMovie</a>
+        </li>
+          <li class="nav-item nav1">
+            <a class="nav-link active " aria-current="page" href="{% url 'credential:logout' %}">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item nav2">
+            <a class="nav-link active" aria-current="page" href="{% url 'credential:register' %}">Register</a>
+          </li>
+        
+          <li class="nav-item nav2">
+            <a class="nav-link active " aria-current="page" href="{% url 'credential:login' %}">Login</a>
+          </li>
+          </ul>
+        {% endif %}
           </div>
         </div>
       </nav>

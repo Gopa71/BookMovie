@@ -52,18 +52,20 @@
           </form>
         <ul class="nav nav-pills">
           
-  
+       
+          {% if user.is_authenticated %}
             <li class="nav-item nav1">
-              <a class="nav-link active " aria-current="page" href="credential/logout">Logout</a>
-        
+              <a class="nav-link active " aria-current="page" href="{% url 'credential:logout' %}">Logout</a>
+          {% else %}
             <li class="nav-item nav2">
-              <a class="nav-link active" aria-current="page" href="credential/register">Register</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'credential:register' %}">Register</a>
             </li>
           
             <li class="nav-item nav2">
-              <a class="nav-link active " aria-current="page" href="credential/login">Login</a>
+              <a class="nav-link active " aria-current="page" href="{% url 'credential:login' %}">Login</a>
             </li>
             </ul>
+          {% endif %}
           </div>
         </div>
       </nav>
@@ -91,7 +93,7 @@
                 <button>{{data.language}}</button>
                 <p>{{data.date_dur}}</p>
                 <button class="button-3" role="button">Add</button>
-                <button class="button-24" role="button">Delete</button>               
+                <a href="{% url 'bookmyshow:delete' data.id %}"><button class="button-24" role="button">Delete</button> </a>              
         </div>
        </div>
     </div>
