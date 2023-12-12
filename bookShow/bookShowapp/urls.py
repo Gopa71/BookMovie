@@ -10,6 +10,7 @@ urlpatterns = [
 
 
     path('registermovie/',views.registermovie,name='regmovie'),
-    path('delete/<int:detail_id>',views.delete,name='delete')
+    path('delete/<int:detail_id>',views.delete,name='delete'),
+    path('update/<int:update_id>',views.update,name='update')
     
 ]

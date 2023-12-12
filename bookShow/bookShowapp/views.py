@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Movies
+from .forms import MovieForm
 
 
 def molly(req):
@@ -40,3 +41,12 @@ def delete(req,detail_id):
    
 
     return render(req,'delete.html')
+
+def update(req,update_id):
+    movie=Movies.objects.get(id=update_id)
+    form=MovieForm(req.POST or None,req.FILES,instance=movie)
+    if form.is_valid():
+        form.save()
+        return redirect('/')
+
+    return render(req,'edit.html',{'form':form,'movie':movie})
